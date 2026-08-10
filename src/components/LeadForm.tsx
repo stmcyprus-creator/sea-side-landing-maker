@@ -63,7 +63,7 @@ export function LeadForm() {
     e.preventDefault();
     const parsed = schema.safeParse({ budget, goal, contact });
     if (!parsed.success) {
-      toast.error(parsed.error.issues[0].message);
+      toast.error(parsed.error.issues[0]?.message ?? "Проверьте данные");
       return;
     }
     setSent(true);

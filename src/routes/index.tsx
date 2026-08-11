@@ -228,7 +228,7 @@ function Landing() {
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
             <img
-              src={logo.url}
+              src={logo}
               alt="STM Real Estate"
               loading="lazy"
               width={480}

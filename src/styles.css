@@ -36,8 +36,8 @@
   --color-ink: var(--ink);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Marcellus", Georgia, serif;
+  --font-sans: "Jost", system-ui, sans-serif;
 }
 
 :root {

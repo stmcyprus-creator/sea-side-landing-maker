@@ -4,6 +4,7 @@ import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
 import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
+import logo from "@/assets/stm-logo-mark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,10 +86,14 @@ function scrollToForm() {
 function Landing() {
   return (
     <div className="min-h-screen">
-      <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-7 md:px-14">
-        <span className="font-display text-lg tracking-[0.32em] text-primary-foreground uppercase">
-          STM
-        </span>
+      <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 md:px-14">
+        <img
+          src={logo.url}
+          alt="STM Real Estate"
+          width={480}
+          height={340}
+          className="h-12 w-auto md:h-14"
+        />
         <span className="hidden text-xs tracking-[0.2em] text-primary-foreground/80 uppercase md:block">
           Real Estate · Turkey
         </span>
@@ -222,8 +227,16 @@ function Landing() {
       <footer className="px-6 py-16 md:px-14">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
-            <p className="font-display text-2xl tracking-[0.2em] uppercase">STM Real Estate</p>
-            <p className="mt-3 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
+            <img
+              src={logo.url}
+              alt="STM Real Estate"
+              loading="lazy"
+              width={480}
+              height={340}
+              className="h-14 w-auto rounded-sm"
+            />
+            <p className="mt-5 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
+            
           </div>
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>

@@ -231,12 +231,11 @@ function Landing() {
               src={logo.url}
               alt="STM Real Estate"
               loading="lazy"
-              width={200}
-              height={200}
-              className="h-16 w-16 object-cover"
-              style={{ objectPosition: "62% 50%" }}
+              width={480}
+              height={340}
+              className="h-14 w-auto rounded-sm"
             />
-            <p className="mt-4 font-display text-xl tracking-[0.18em] uppercase">STM Real Estate</p>
+            <p className="mt-5 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
             <p className="mt-3 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
           </div>
           <div className="space-y-2 text-sm text-muted-foreground">

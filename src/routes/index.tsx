@@ -4,6 +4,7 @@ import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
 import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
+import logo from "@/assets/stm-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,10 +86,15 @@ function scrollToForm() {
 function Landing() {
   return (
     <div className="min-h-screen">
-      <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-7 md:px-14">
-        <span className="font-display text-lg tracking-[0.32em] text-primary-foreground uppercase">
-          STM
-        </span>
+      <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 md:px-14">
+        <img
+          src={logo.url}
+          alt="STM Real Estate"
+          width={160}
+          height={160}
+          className="h-14 w-14 object-cover md:h-16 md:w-16"
+          style={{ objectPosition: "62% 50%" }}
+        />
         <span className="hidden text-xs tracking-[0.2em] text-primary-foreground/80 uppercase md:block">
           Real Estate · Turkey
         </span>

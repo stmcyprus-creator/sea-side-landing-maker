@@ -228,7 +228,16 @@ function Landing() {
       <footer className="px-6 py-16 md:px-14">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
-            <p className="font-display text-2xl tracking-[0.2em] uppercase">STM Real Estate</p>
+            <img
+              src={logo.url}
+              alt="STM Real Estate"
+              loading="lazy"
+              width={200}
+              height={200}
+              className="h-16 w-16 object-cover"
+              style={{ objectPosition: "62% 50%" }}
+            />
+            <p className="mt-4 font-display text-xl tracking-[0.18em] uppercase">STM Real Estate</p>
             <p className="mt-3 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
           </div>
           <div className="space-y-2 text-sm text-muted-foreground">

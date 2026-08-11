@@ -4,7 +4,7 @@ import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
 import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
-import logo from "@/assets/stm-logo-mark.png.asset.json";
+import logo from "@/assets/stm-logo-mark.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

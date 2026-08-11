@@ -4,7 +4,7 @@ import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
 import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
-import logo from "@/assets/stm-logo-mark.png.asset.json";
+import logo from "@/assets/stm-logo-mark.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -88,7 +88,7 @@ function Landing() {
     <div className="min-h-screen">
       <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 md:px-14">
         <img
-          src={logo.url}
+          src={logo}
           alt="STM Real Estate"
           width={480}
           height={340}
@@ -228,7 +228,7 @@ function Landing() {
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
             <img
-              src={logo.url}
+              src={logo}
               alt="STM Real Estate"
               loading="lazy"
               width={480}

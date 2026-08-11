@@ -236,7 +236,7 @@ function Landing() {
               className="h-14 w-auto rounded-sm"
             />
             <p className="mt-5 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
-            <p className="mt-3 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
+            
           </div>
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>

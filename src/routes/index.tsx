@@ -4,7 +4,7 @@ import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
 import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
-import logo from "@/assets/stm-logo.png.asset.json";
+import logo from "@/assets/stm-logo-mark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,10 +90,9 @@ function Landing() {
         <img
           src={logo.url}
           alt="STM Real Estate"
-          width={160}
-          height={160}
-          className="h-14 w-14 object-cover md:h-16 md:w-16"
-          style={{ objectPosition: "62% 50%" }}
+          width={480}
+          height={340}
+          className="h-12 w-auto md:h-14"
         />
         <span className="hidden text-xs tracking-[0.2em] text-primary-foreground/80 uppercase md:block">
           Real Estate · Turkey

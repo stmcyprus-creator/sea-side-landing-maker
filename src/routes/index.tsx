@@ -88,7 +88,7 @@ function Landing() {
     <div className="min-h-screen">
       <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 md:px-14">
         <img
-          src={logo.url}
+          src={logo}
           alt="STM Real Estate"
           width={480}
           height={340}

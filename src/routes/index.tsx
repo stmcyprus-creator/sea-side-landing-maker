@@ -4,83 +4,167 @@ import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
 import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
+import cyprusImg from "@/assets/cyprus.jpg";
+import typeApartments from "@/assets/type-apartments.jpg";
+import typeNewbuild from "@/assets/type-newbuild.jpg";
+import typeVillas from "@/assets/type-villas.jpg";
 import logo from "@/assets/stm-logo-mark.png";
+
+const TITLE = "Недвижимость в Турции и на Северном Кипре у моря | STM Real Estate";
+const DESCRIPTION =
+  "Подбор недвижимости в Турции и на Северном Кипре для жизни, ВНЖ, аренды и инвестиций. Аланья, Мерсин, Северный Кипр. Проверка объектов и сопровождение сделки.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "STM Real Estate — апартаменты в Аланье и Мерсине" },
-      {
-        name: "description",
-        content:
-          "Апартаменты бизнес-класса в Аланье и Мерсине под ключ: подбор ликвидных объектов, безопасные расчеты, ВНЖ и управление недвижимостью.",
-      },
-      { property: "og:title", content: "STM Real Estate — недвижимость в Турции под ключ" },
-      {
-        property: "og:description",
-        content:
-          "Инвестиции и жизнь у моря в Турции без рисков: юридическая чистота, представители на месте, ВНЖ и управление арендой.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://sea-side-landing-maker.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://sea-side-landing-maker.lovable.app/" }],
   }),
   component: Landing,
 });
 
-const advantages = [
+const trust = [
   {
-    icon: "🛡",
-    title: "Юридическая чистота на 100%",
-    text: "Полная проверка объектов, титулов (TAPU) и сопровождение сделки нашими юристами.",
+    title: "Проверяем объекты и застройщиков",
+    text: "Смотрим не только на красивые фото, но и на документы, стадию строительства, репутацию застройщика и перспективу района.",
   },
   {
-    icon: "👥",
-    title: "Представители на месте в Турции",
-    text: "Личный менеджер встретит в Аланье или Мерсине, организует показ и проведет за руку через все этапы.",
+    title: "Подбираем под вашу цель",
+    text: "Для жизни, инвестиций, аренды, ВНЖ или покупки второго дома у моря — стратегия подбирается индивидуально.",
   },
   {
-    icon: "💳",
-    title: "Безопасные расчеты",
-    text: "Помогаем решить вопрос с трансфером средств и проведением оплаты в текущих реалиях (включая проверенные крипто-контуры).",
+    title: "Сопровождаем сделку",
+    text: "Помогаем пройти путь от первого запроса до подписания договора, оплаты, оформления документов и передачи ключей.",
   },
   {
-    icon: "📑",
-    title: "Пакеты для ВНЖ и Гражданства",
-    text: "Берем на себя бюрократию — оформляем ВНЖ сразу после покупки.",
+    title: "Помогаем после покупки",
+    text: "Подключение сервисов, управление объектом, аренда, бытовые вопросы и адаптация на месте.",
+  },
+];
+
+const purposes = [
+  {
+    title: "Для жизни у моря",
+    text: "Квартиры и виллы в районах с развитой инфраструктурой, магазинами, школами, медициной и комфортной средой для семьи.",
+  },
+  {
+    title: "Для инвестиций",
+    text: "Объекты с потенциалом роста стоимости, понятной логикой района и возможностью перепродажи в будущем.",
+  },
+  {
+    title: "Для аренды",
+    text: "Апартаменты в туристических локациях, которые можно использовать для отдыха и сдачи в аренду.",
+  },
+  {
+    title: "Для ВНЖ и переезда",
+    text: "Подбор недвижимости с учётом требований к оформлению статуса, проживания и долгосрочного планирования.",
   },
 ];
 
 const locations = [
   {
-    img: mersinImg,
-    city: "Мерсин",
-    tag: "Новый инвестиционный хаб",
-    text: "Динамично развивающийся регион с доступными ценами на бизнес-класс и высоким потенциалом роста капитализации. Идеально для старта инвестиций.",
-  },
-  {
     img: alanyaImg,
     city: "Аланья",
-    tag: "Проверенная классика и комфорт",
-    text: "Развитая инфраструктура, готовый фонд, апартаменты с отельным сервисом для жизни, отдыха и быстрого оформления ВНЖ.",
+    tag: "Готовая инфраструктура и жизнь у моря",
+    text: "Аланья подходит для жизни, отдыха и аренды: море, развитые районы, международная среда, готовые комплексы и высокий спрос на аренду.",
+  },
+  {
+    img: mersinImg,
+    city: "Мерсин",
+    tag: "Перспективный рынок с доступным входом",
+    text: "Мерсин — развивающийся прибрежный город с более доступными ценами, новыми проектами и потенциалом роста стоимости недвижимости.",
+  },
+  {
+    img: cyprusImg,
+    city: "Северный Кипр",
+    tag: "Спокойная жизнь и инвестиции у моря",
+    text: "Северный Кипр интересен покупателям, которые ищут море, мягкий климат, университетскую среду, курортную аренду и альтернативный рынок недвижимости.",
   },
 ];
 
-const packages = [
+const strategies = [
   {
-    name: "Пакет «Инвестор»",
-    city: "Мерсин",
-    text: "Объекты на этапе строительства, расчет доходности, рост стоимости до сдачи дома + опция управления арендой.",
+    budget: "До $100k",
+    text: "Доступный вход в рынок, компактные апартаменты, новостройки на ранних этапах и объекты для первого инвестирования.",
   },
   {
-    name: "Пакет «Курорт и ВНЖ»",
-    city: "Аланья",
-    text: "Готовые апартаменты в комплексах бизнес-класса, полное юридическое сопровождение и гарантированная помощь в получении ВНЖ.",
+    budget: "$100k–$200k",
+    text: "Комфортные квартиры в хороших комплексах, варианты для жизни, отдыха, аренды и долгосрочного владения.",
+  },
+  {
+    budget: "От $200k",
+    text: "Премиальные апартаменты, просторные квартиры, виллы и объекты с более высоким уровнем сервиса и локации.",
+  },
+];
+
+const steps = [
+  {
+    title: "Знакомимся с вашей целью",
+    text: "Определяем бюджет, страну, город, срок покупки и задачу: жизнь, инвестиции, аренда или ВНЖ.",
+  },
+  {
+    title: "Подбираем объекты",
+    text: "Готовим персональную подборку объектов с фото, ценами, локациями и пояснением по каждому варианту.",
+  },
+  {
+    title: "Организуем просмотр",
+    text: "Показываем объекты онлайн или организуем просмотр на месте в Турции / Северном Кипре.",
+  },
+  {
+    title: "Проверяем и согласуем сделку",
+    text: "Помогаем проверить объект, документы, условия оплаты и договор.",
+  },
+  {
+    title: "Сопровождаем до ключей",
+    text: "Помогаем пройти сделку, оформить документы и решить вопросы после покупки.",
+  },
+];
+
+const formats = [
+  {
+    img: typeApartments,
+    title: "Апартаменты у моря",
+    text: "Компактные и просторные апартаменты в шаговой доступности от моря — для отдыха, аренды и жизни.",
+    price: "от $80k",
+  },
+  {
+    img: typeNewbuild,
+    title: "Квартиры в новых комплексах",
+    text: "Современные комплексы с инфраструктурой: бассейн, охрана, зелёные зоны и сервис.",
+    price: "от $110k",
+  },
+  {
+    img: typeVillas,
+    title: "Виллы и таунхаусы",
+    text: "Отдельные дома с террасами и бассейном — для семьи, долгого проживания и премиальной аренды.",
+    price: "по запросу",
+  },
+  {
+    img: typeNewbuild,
+    title: "Объекты на стадии строительства",
+    text: "Проекты на раннем этапе с рассрочкой от застройщика и анализом ликвидности района.",
+    price: "по запросу",
   },
 ];
 
 function scrollToForm() {
   document.getElementById("lead")?.scrollIntoView({ behavior: "smooth" });
+}
+
+function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
+  return (
+    <>
+      <p className="eyebrow">{eyebrow}</p>
+      <h2 className="mt-5 max-w-2xl text-3xl md:text-5xl">{title}</h2>
+    </>
+  );
 }
 
 function Landing() {
@@ -92,82 +176,106 @@ function Landing() {
           alt="STM Real Estate"
           width={480}
           height={340}
-          className="h-12 w-auto md:h-14"
+          className="h-11 w-auto md:h-14"
         />
-        <span className="hidden text-xs tracking-[0.2em] text-primary-foreground/80 uppercase md:block">
-          Real Estate · Turkey
+        <span className="hidden text-[0.68rem] tracking-[0.2em] text-primary-foreground/80 uppercase sm:block">
+          Real Estate · Turkey · North Cyprus
         </span>
       </header>
 
       {/* Hero */}
-      <section className="relative isolate flex min-h-[92vh] items-end">
+      <section className="relative isolate flex min-h-[100svh] items-end">
         <img
           src={heroImg}
-          alt="Жилой комплекс бизнес-класса у моря в Турции"
+          alt="Современная недвижимость у моря в Турции"
           width={1920}
           height={1200}
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/85 via-ink/40 to-ink/25" />
-        <div className="px-6 pb-20 md:px-14 md:pb-28">
-          <p className="text-xs tracking-[0.24em] text-gold-soft uppercase">
-            Аланья · Мерсин
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/50 to-ink/30" />
+        <div className="px-6 pb-16 md:px-14 md:pb-28">
+          <p className="text-[0.68rem] tracking-[0.24em] text-gold-soft uppercase">
+            Аланья · Мерсин · Северный Кипр
           </p>
-          <h1 className="mt-6 max-w-3xl text-4xl leading-[1.08] text-primary-foreground md:text-6xl">
-            Инвестиции и жизнь у моря в Турции без рисков и хлопот
+          <h1 className="mt-5 max-w-3xl text-[1.9rem] leading-[1.14] text-primary-foreground sm:text-4xl md:text-6xl">
+            Недвижимость у моря в Турции и на Северном Кипре для жизни, ВНЖ и инвестиций
           </h1>
-          <p className="mt-6 max-w-xl text-sm leading-relaxed text-primary-foreground/85 md:text-base">
-            Апартаменты бизнес-класса в Аланье и Мерсине. Полный пакет услуг «под ключ»: от
-            подбора ликвидных объектов и безопасных расчетов до ВНЖ и управления недвижимостью.
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-primary-foreground/85 md:text-base">
+            Подбираем проверенные квартиры и виллы под ваш бюджет: для переезда, отдыха, аренды
+            или сохранения капитала. Сопровождаем сделку от подбора объекта до оформления
+            документов и получения ключей.
           </p>
           <Button
             onClick={scrollToForm}
             size="lg"
-            className="mt-10 h-13 rounded-sm bg-accent px-8 text-xs tracking-[0.18em] text-accent-foreground uppercase hover:bg-gold-soft"
+            className="mt-8 h-13 w-full rounded-sm bg-accent px-8 text-xs tracking-[0.16em] text-accent-foreground uppercase hover:bg-gold-soft sm:w-auto"
           >
-            Получить закрытый каталог объектов
+            Получить подборку объектов под мой бюджет
           </Button>
+          <p className="mt-4 text-[0.68rem] leading-relaxed tracking-[0.12em] text-primary-foreground/65 uppercase">
+            Аланья · Мерсин · Северный Кипр
+            <br />
+            Подбор объектов · Проверка · Сопровождение сделки
+          </p>
         </div>
       </section>
 
-      {/* Advantages */}
-      <section className="px-6 py-24 md:px-14 md:py-32">
-        <p className="eyebrow">Почему выбирают STM Real Estate</p>
-        <h2 className="mt-5 max-w-2xl text-3xl md:text-5xl">
-          Больше, чем просто покупка недвижимости
-        </h2>
-        <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-2">
-          {advantages.map((a) => (
-            <div key={a.title} className="bg-card p-8 md:p-10">
-              <span className="text-2xl">{a.icon}</span>
-              <h3 className="mt-5 text-xl">{a.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
+      {/* Trust */}
+      <section className="px-6 py-20 md:px-14 md:py-32">
+        <SectionHead eyebrow="Доверие" title="Почему покупатели выбирают STM Real Estate" />
+        <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-2">
+          {trust.map((t) => (
+            <div
+              key={t.title}
+              className="border-t-2 border-accent bg-card p-7 shadow-soft md:p-10"
+            >
+              <h3 className="text-xl md:text-2xl">{t.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{t.text}</p>
             </div>
           ))}
         </div>
       </section>
 
+      {/* Purpose */}
+      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+        <SectionHead eyebrow="Цель покупки" title="Подберём объект под вашу цель" />
+        <div className="mt-12 grid gap-px border border-border bg-border md:mt-14 md:grid-cols-2">
+          {purposes.map((p) => (
+            <div key={p.title} className="bg-card p-7 md:p-10">
+              <h3 className="text-xl md:text-2xl">{p.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+            </div>
+          ))}
+        </div>
+        <Button
+          onClick={scrollToForm}
+          size="lg"
+          className="mt-10 h-13 w-full rounded-sm px-8 text-xs tracking-[0.16em] uppercase sm:w-auto"
+        >
+          Подобрать объект под мою цель
+        </Button>
+      </section>
+
       {/* Locations */}
-      <section className="bg-sand px-6 py-24 md:px-14 md:py-32">
-        <p className="eyebrow">Локации</p>
-        <h2 className="mt-5 max-w-2xl text-3xl md:text-5xl">
-          Два перспективных направления для жизни и капитала
-        </h2>
-        <div className="mt-14 grid gap-10 md:grid-cols-2">
+      <section className="px-6 py-20 md:px-14 md:py-32">
+        <SectionHead eyebrow="Локации" title="Два направления для жизни и капитала" />
+        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-3">
           {locations.map((l) => (
             <article key={l.city} className="bg-card shadow-soft">
               <img
                 src={l.img}
-                alt={`${l.city}, Турция`}
+                alt={`${l.city} — недвижимость у моря`}
                 loading="lazy"
                 width={1024}
                 height={1280}
-                className="h-72 w-full object-cover md:h-96"
+                className="h-64 w-full object-cover md:h-80"
               />
-              <div className="p-8 md:p-10">
-                <h3 className="text-3xl">{l.city}</h3>
-                <p className="mt-2 text-xs tracking-[0.18em] text-accent uppercase">{l.tag}</p>
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{l.text}</p>
+              <div className="p-7 md:p-8">
+                <h3 className="text-2xl md:text-3xl">{l.city}</h3>
+                <p className="mt-2 text-[0.68rem] tracking-[0.16em] text-accent uppercase">
+                  {l.tag}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{l.text}</p>
               </div>
             </article>
           ))}
@@ -176,48 +284,145 @@ function Landing() {
           onClick={scrollToForm}
           variant="outline"
           size="lg"
-          className="mt-12 h-13 rounded-sm border-foreground/25 bg-transparent px-8 text-xs tracking-[0.18em] uppercase hover:bg-foreground hover:text-primary-foreground"
+          className="mt-10 h-13 w-full rounded-sm border-foreground/25 bg-transparent px-8 text-xs tracking-[0.16em] uppercase hover:bg-foreground hover:text-primary-foreground sm:w-auto"
         >
-          Подобрать город под мои цели
+          Помочь выбрать локацию
         </Button>
       </section>
 
-      {/* Packages */}
-      <section className="px-6 py-24 md:px-14 md:py-32">
-        <p className="eyebrow">Пакетные решения «под ключ»</p>
-        <h2 className="mt-5 max-w-2xl text-3xl md:text-5xl">
-          Готовые стратегии для вашего капитала
-        </h2>
-        <div className="mt-14 grid gap-10 md:grid-cols-2">
-          {packages.map((p) => (
-            <div key={p.name} className="border-t-2 border-accent bg-card p-8 shadow-soft md:p-10">
-              <p className="text-xs tracking-[0.18em] text-muted-foreground uppercase">{p.city}</p>
-              <h3 className="mt-3 text-2xl md:text-3xl">{p.name}</h3>
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+      {/* Budget strategies */}
+      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+        <SectionHead eyebrow="Бюджет" title="Подберём стратегию покупки под ваш бюджет" />
+        <div className="mt-12 space-y-6 md:mt-14">
+          {strategies.map((s) => (
+            <div
+              key={s.budget}
+              className="flex flex-col gap-4 border-l-2 border-accent bg-card p-7 shadow-soft md:flex-row md:items-center md:gap-12 md:p-10"
+            >
+              <h3 className="shrink-0 text-2xl md:w-64 md:text-3xl">{s.budget}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{s.text}</p>
             </div>
           ))}
         </div>
         <Button
           onClick={scrollToForm}
           size="lg"
-          className="mt-12 h-13 rounded-sm px-8 text-xs tracking-[0.18em] uppercase"
+          className="mt-10 h-13 w-full rounded-sm px-8 text-xs tracking-[0.16em] uppercase sm:w-auto"
         >
-          Узнать подробнее о пакетах
+          Рассчитать варианты под мой бюджет
         </Button>
       </section>
 
-      {/* Lead form */}
-      <section id="lead" className="bg-ink px-6 py-24 md:px-14 md:py-32">
-        <div className="grid gap-14 md:grid-cols-2 md:items-center">
+      {/* Process */}
+      <section className="px-6 py-20 md:px-14 md:py-32">
+        <SectionHead eyebrow="Процесс" title="Как мы сопровождаем покупку" />
+        <ol className="mt-12 border-t border-border md:mt-14">
+          {steps.map((s, i) => (
+            <li
+              key={s.title}
+              className="flex flex-col gap-3 border-b border-border py-8 md:flex-row md:gap-12"
+            >
+              <span className="text-sm tracking-[0.2em] text-accent">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div className="md:flex-1">
+                <h3 className="text-xl md:text-2xl">{s.title}</h3>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  {s.text}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* Founder */}
+      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+        <div className="grid gap-10 md:grid-cols-[minmax(0,22rem)_1fr] md:items-center md:gap-16">
+          <div className="flex aspect-[4/5] items-center justify-center border border-border bg-card shadow-soft">
+            <span className="text-[0.68rem] tracking-[0.24em] text-muted-foreground uppercase">
+              Founder Photo
+            </span>
+          </div>
           <div>
+            <SectionHead eyebrow="Основатель" title="Кто стоит за STM Real Estate" />
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              STM Real Estate — это персональный подход к подбору зарубежной недвижимости для
+              жизни и инвестиций.
+            </p>
+            <p className="mt-6 text-lg md:text-xl">Темур Шабанов</p>
+            <p className="mt-1 text-[0.68rem] tracking-[0.16em] text-accent uppercase">
+              Основатель
+            </p>
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Я помогаю клиентам смотреть на недвижимость не только как на красивую квартиру у
+              моря, а как на серьёзное финансовое решение. В подборе важны локация, ликвидность,
+              документы, застройщик, расходы после покупки и реальный сценарий использования
+              объекта.
+            </p>
+            <Button
+              onClick={scrollToForm}
+              size="lg"
+              className="mt-8 h-13 w-full rounded-sm px-8 text-xs tracking-[0.16em] uppercase sm:w-auto"
+            >
+              Получить консультацию
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Formats */}
+      <section className="px-6 py-20 md:px-14 md:py-32">
+        <SectionHead eyebrow="Объекты" title="Актуальные форматы недвижимости" />
+        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2 xl:grid-cols-4">
+          {formats.map((f) => (
+            <article key={f.title} className="bg-card shadow-soft">
+              <img
+                src={f.img}
+                alt={f.title}
+                loading="lazy"
+                width={1024}
+                height={768}
+                className="h-56 w-full object-cover"
+              />
+              <div className="p-6 md:p-7">
+                <h3 className="text-xl">{f.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.text}</p>
+                <p className="mt-5 text-[0.68rem] tracking-[0.16em] text-accent uppercase">
+                  {f.price}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Lead form */}
+      <section id="lead" className="bg-ink px-6 py-20 md:px-14 md:py-32">
+        <div className="grid gap-12 md:grid-cols-2 md:items-start md:gap-16">
+          <div className="md:sticky md:top-20">
             <div className="hairline" />
             <h2 className="mt-7 text-3xl text-primary-foreground md:text-5xl">
-              Получите подборку ликвидных объектов под ваш бюджет
+              Получите персональную подборку объектов под ваш бюджет
             </h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/75">
-              Ответьте на 3 вопроса, и мы пришлем актуальный каталог апартаментов
-              бизнес-класса в Мерсине и Аланье с расчетом доходности в Telegram или WhatsApp.
+              Ответьте на несколько вопросов — мы подготовим варианты недвижимости в Турции или
+              на Северном Кипре под вашу цель покупки.
             </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="https://wa.me/"
+                className="rounded-sm border border-gold-soft/50 px-6 py-3 text-[0.68rem] tracking-[0.16em] text-gold-soft uppercase transition-colors hover:bg-accent hover:text-accent-foreground"
+              >
+                WhatsApp
+              </a>
+              <a
+                href="https://t.me/"
+                className="rounded-sm border border-gold-soft/50 px-6 py-3 text-[0.68rem] tracking-[0.16em] text-gold-soft uppercase transition-colors hover:bg-accent hover:text-accent-foreground"
+              >
+                Telegram
+              </a>
+            </div>
           </div>
           <LeadForm />
         </div>
@@ -235,8 +440,9 @@ function Landing() {
               height={340}
               className="h-14 w-auto rounded-sm"
             />
-            <p className="mt-5 text-sm text-muted-foreground">Аланья · Мерсин · Турция</p>
-            
+            <p className="mt-5 text-sm text-muted-foreground">
+              Аланья · Мерсин · Северный Кипр
+            </p>
           </div>
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>
@@ -263,8 +469,8 @@ function Landing() {
           </div>
         </div>
         <p className="mt-12 border-t border-border pt-8 text-xs leading-relaxed text-muted-foreground">
-          Информация на сайте не является публичной офертой. Все расчеты носят
-          ознакомительный характер.
+          Информация на сайте не является публичной офертой. Все расчёты носят ознакомительный
+          характер и не являются финансовой или юридической консультацией.
         </p>
       </footer>
     </div>

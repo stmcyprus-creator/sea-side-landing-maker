@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
-import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
 import cyprusImg from "@/assets/cyprus.jpg";
 import typeApartments from "@/assets/type-apartments.jpg";
@@ -71,15 +70,9 @@ const purposes = [
 const locations = [
   {
     img: alanyaImg,
-    city: "Аланья",
-    tag: "Готовая инфраструктура и жизнь у моря",
-    text: "Аланья подходит для жизни, отдыха и аренды: море, развитые районы, международная среда, готовые комплексы и высокий спрос на аренду.",
-  },
-  {
-    img: mersinImg,
-    city: "Мерсин",
-    tag: "Перспективный рынок с доступным входом",
-    text: "Мерсин — развивающийся прибрежный город с более доступными ценами, новыми проектами и потенциалом роста стоимости недвижимости.",
+    city: "Турция",
+    tag: "Аланья, Мерсин и другие прибрежные города",
+    text: "Турция — зрелый рынок недвижимости у моря: развитая инфраструктура, международная среда, удобные условия для ВНЖ и стабильный спрос на аренду в туристических локациях.",
   },
   {
     img: cyprusImg,
@@ -264,7 +257,7 @@ function Landing() {
       {/* Locations */}
       <section className="px-6 py-20 md:px-14 md:py-32">
         <SectionHead eyebrow="Локации" title="Два направления для жизни и капитала" />
-        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2">
           {locations.map((l) => (
             <article key={l.city} className="bg-card shadow-soft">
               <img

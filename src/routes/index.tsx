@@ -212,9 +212,7 @@ function Landing() {
             Получить подборку объектов под мой бюджет
           </Button>
           <p className="mt-4 text-[0.68rem] leading-relaxed tracking-[0.12em] text-primary-foreground/65 uppercase">
-            Аланья · Мерсин · Северный Кипр
-            <br />
-            Подбор объектов · Проверка · Сопровождение сделки
+            Гарантия юридической чистоты объекта
           </p>
         </div>
       </section>

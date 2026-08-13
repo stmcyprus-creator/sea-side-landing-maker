@@ -158,7 +158,7 @@ function scrollToForm() {
   document.getElementById("lead")?.scrollIntoView({ behavior: "smooth" });
 }
 
-function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
+function SectionHead({ eyebrow, title }: { eyebrow: string; title: React.ReactNode }) {
   return (
     <>
       <p className="eyebrow">{eyebrow}</p>

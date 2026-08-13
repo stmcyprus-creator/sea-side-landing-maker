@@ -179,7 +179,7 @@ function Landing() {
           className="h-11 w-auto md:h-14"
         />
         <span className="hidden text-[0.68rem] tracking-[0.2em] text-primary-foreground/80 uppercase sm:block">
-          Real Estate · Turkey · North Cyprus
+          Турция · Северный Кипр
         </span>
       </header>
 

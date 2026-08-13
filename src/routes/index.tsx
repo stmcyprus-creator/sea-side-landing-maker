@@ -258,7 +258,7 @@ function Landing() {
       {/* Locations */}
       <section className="px-6 py-20 md:px-14 md:py-32">
         <SectionHead eyebrow="Локации" title="Два направления для жизни и капитала" />
-        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2">
           {locations.map((l) => (
             <article key={l.city} className="bg-card shadow-soft">
               <img

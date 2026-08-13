@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { LeadForm } from "@/components/LeadForm";
 import heroImg from "@/assets/hero.jpg";
-import mersinImg from "@/assets/mersin.jpg";
 import alanyaImg from "@/assets/alanya.jpg";
 import cyprusImg from "@/assets/cyprus.jpg";
 import typeApartments from "@/assets/type-apartments.jpg";

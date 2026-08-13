@@ -271,8 +271,12 @@ function Landing() {
 
       {/* Locations */}
       <section className="px-6 py-20 md:px-14 md:py-32">
-        <SectionHead eyebrow="Локации" title="Два направления для жизни и капитала" />
-        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2">
+        <SectionHead eyebrow="Локации" title="Локации для жизни, ВНЖ и инвестиций" />
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
+          Поможем выбрать страну и город под вашу цель: переезд, отдых, аренда, сохранение
+          капитала или покупка недвижимости для получения статуса.
+        </p>
+        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2 lg:grid-cols-3">
           {locations.map((l) => (
             <article key={l.city} className="bg-card shadow-soft">
               <img
@@ -351,27 +355,29 @@ function Landing() {
 
       {/* Founder */}
       <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,22rem)_1fr] md:items-center md:gap-16">
+        <div className="grid gap-10 md:grid-cols-[minmax(0,22rem)_1fr] md:items-start md:gap-16">
           <div className="flex aspect-[4/5] items-center justify-center border border-border bg-card shadow-soft">
             <span className="text-[0.68rem] tracking-[0.24em] text-muted-foreground uppercase">
               Founder Photo
             </span>
           </div>
           <div>
-            <SectionHead eyebrow="Основатель" title="Кто стоит за STM Real Estate" />
+            <SectionHead
+              eyebrow="Основатель"
+              title="Персональный подход к зарубежной недвижимости"
+            />
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              STM Real Estate — это персональный подход к подбору зарубежной недвижимости для
-              жизни и инвестиций.
+              STM Real Estate помогает клиентам выбирать недвижимость в Турции и на Северном Кипре
+              не по красивым фотографиям, а по цели покупки: жизнь, аренда, ВНЖ, сохранение
+              капитала или инвестиционный рост.
             </p>
-            <p className="mt-6 text-lg md:text-xl">Темур Шабанов</p>
-            <p className="mt-1 text-[0.68rem] tracking-[0.16em] text-accent uppercase">
-              Основатель
+            <p className="mt-6 text-[0.68rem] tracking-[0.16em] text-accent uppercase">
+              Основатель — Темур Шабанов
             </p>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Я помогаю клиентам смотреть на недвижимость не только как на красивую квартиру у
-              моря, а как на серьёзное финансовое решение. В подборе важны локация, ликвидность,
-              документы, застройщик, расходы после покупки и реальный сценарий использования
-              объекта.
+              Мой подход — смотреть на объект как на финансовое и жизненное решение: учитывать
+              локацию, ликвидность, документы, расходы после покупки, качество застройщика и
+              реальный сценарий использования недвижимости.
             </p>
             <Button
               onClick={scrollToForm}
@@ -386,8 +392,8 @@ function Landing() {
 
       {/* Formats */}
       <section className="px-6 py-20 md:px-14 md:py-32">
-        <SectionHead eyebrow="Объекты" title="Актуальные форматы недвижимости" />
-        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2 xl:grid-cols-4">
+        <SectionHead eyebrow="Объекты" title="Форматы недвижимости, которые мы подбираем" />
+        <div className="mt-12 grid gap-8 md:mt-14 md:grid-cols-2 xl:grid-cols-3">
           {formats.map((f) => (
             <article key={f.title} className="bg-card shadow-soft">
               <img

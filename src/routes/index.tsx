@@ -158,7 +158,7 @@ function scrollToForm() {
   document.getElementById("lead")?.scrollIntoView({ behavior: "smooth" });
 }
 
-function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
+function SectionHead({ eyebrow, title }: { eyebrow: string; title: React.ReactNode }) {
   return (
     <>
       <p className="eyebrow">{eyebrow}</p>
@@ -179,7 +179,7 @@ function Landing() {
           className="h-11 w-auto md:h-14"
         />
         <span className="hidden text-[0.68rem] tracking-[0.2em] text-primary-foreground/80 uppercase sm:block">
-          Real Estate · Turkey · North Cyprus
+          Турция · Северный Кипр
         </span>
       </header>
 
@@ -212,16 +212,22 @@ function Landing() {
             Получить подборку объектов под мой бюджет
           </Button>
           <p className="mt-4 text-[0.68rem] leading-relaxed tracking-[0.12em] text-primary-foreground/65 uppercase">
-            Аланья · Мерсин · Северный Кипр
-            <br />
-            Подбор объектов · Проверка · Сопровождение сделки
+            Гарантия юридической чистоты объекта
           </p>
         </div>
       </section>
 
       {/* Trust */}
       <section className="px-6 py-20 md:px-14 md:py-32">
-        <SectionHead eyebrow="Доверие" title="Почему покупатели выбирают STM Real Estate" />
+        <SectionHead
+          eyebrow="Доверие"
+          title={
+            <>
+              Почему покупатели выбирают{" "}
+              <span className="font-display">STM Real Estate</span>
+            </>
+          }
+        />
         <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-2">
           {trust.map((t) => (
             <div

@@ -89,6 +89,24 @@
   }
 }
 
+@layer utilities {
+  .hero-headline {
+    min-height: 2.2em;
+  }
+
+  @media (min-width: 640px) {
+    .hero-headline {
+      min-height: 2.6em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero-headline {
+      min-height: 2.5em;
+    }
+  }
+}
+
 @utility eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.24em;

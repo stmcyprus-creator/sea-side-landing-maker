@@ -219,7 +219,15 @@ function Landing() {
 
       {/* Trust */}
       <section className="px-6 py-20 md:px-14 md:py-32">
-        <SectionHead eyebrow="Доверие" title="Почему покупатели выбирают STM Real Estate" />
+        <SectionHead
+          eyebrow="Доверие"
+          title={
+            <>
+              Почему покупатели выбирают{" "}
+              <span className="font-display">STM Real Estate</span>
+            </>
+          }
+        />
         <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-2">
           {trust.map((t) => (
             <div

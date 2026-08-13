@@ -197,13 +197,12 @@ function Landing() {
           <p className="text-[0.68rem] tracking-[0.24em] text-gold-soft uppercase">
             Аланья · Мерсин · Северный Кипр
           </p>
-          <h1 className="mt-5 max-w-3xl text-[1.9rem] leading-[1.14] text-primary-foreground sm:text-4xl md:text-6xl">
-            Недвижимость у моря в Турции и на Северном Кипре для жизни, ВНЖ и инвестиций
+          <h1 className="hero-headline mt-5 max-w-3xl text-balance text-[1.9rem] leading-[1.14] text-primary-foreground sm:text-4xl md:text-6xl">
+            Недвижимость у моря для жизни, ВНЖ и инвестиций Турция, Северный Кипр
           </h1>
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-primary-foreground/85 md:text-base">
-            Подбираем проверенные квартиры и виллы под ваш бюджет: для переезда, отдыха, аренды
-            или сохранения капитала. Сопровождаем сделку от подбора объекта до оформления
-            документов и получения ключей.
+            Подберём проверенные объекты под ваш бюджет. Сопровождаем сделку от подбора до
+            оформления документов.
           </p>
           <Button
             onClick={scrollToForm}

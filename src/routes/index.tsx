@@ -251,7 +251,7 @@ function Landing() {
       </section>
 
       {/* Purpose */}
-      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+      <section className="watermark-texture bg-sand px-6 py-20 md:px-14 md:py-32">
         <SectionHead eyebrow="Цель покупки" title="Подберём объект под вашу цель" />
         <div className="mt-12 grid gap-px border border-border bg-border md:mt-14 md:grid-cols-2">
           {purposes.map((p) => (

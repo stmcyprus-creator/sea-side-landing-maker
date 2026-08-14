@@ -124,6 +124,35 @@
   background: var(--gold);
 }
 
+@utility watermark-texture {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(
+        135deg,
+        color-mix(in oklab, var(--gold) 7%, transparent) 0 1px,
+        transparent 1px 46px
+      ),
+      repeating-linear-gradient(
+        45deg,
+        color-mix(in oklab, var(--ink) 4%, transparent) 0 1px,
+        transparent 1px 46px
+      ),
+      radial-gradient(
+        circle at 20% 15%,
+        color-mix(in oklab, var(--gold) 9%, transparent),
+        transparent 55%
+      );
+  }
+}
+
 @utility watermark-surface {
   position: relative;
   isolation: isolate;

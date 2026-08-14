@@ -178,7 +178,7 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: React.ReactNo
 
 function Landing() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen watermark-surface">
       <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 md:px-14">
         <img
           src={logo}
@@ -251,7 +251,7 @@ function Landing() {
       </section>
 
       {/* Purpose */}
-      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+      <section className="watermark-texture bg-sand px-6 py-20 md:px-14 md:py-32">
         <SectionHead eyebrow="Цель покупки" title="Подберём объект под вашу цель" />
         <div className="mt-12 grid gap-px border border-border bg-border md:mt-14 md:grid-cols-2">
           {purposes.map((p) => (
@@ -309,7 +309,7 @@ function Landing() {
       </section>
 
       {/* Budget strategies */}
-      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+      <section className="watermark-texture bg-sand px-6 py-20 md:px-14 md:py-32">
         <SectionHead eyebrow="Бюджет" title="Подберём стратегию покупки под ваш бюджет" />
         <div className="mt-12 space-y-6 md:mt-14">
           {strategies.map((s) => (
@@ -355,7 +355,7 @@ function Landing() {
       </section>
 
       {/* Founder */}
-      <section className="watermark-surface relative bg-sand px-6 py-20 md:px-14 md:py-32">
+      <section className="watermark-texture relative bg-sand px-6 py-20 md:px-14 md:py-32">
         <div className="relative grid gap-10 md:grid-cols-[minmax(0,22rem)_1fr] md:items-start md:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden border border-border bg-card shadow-soft">
             <img

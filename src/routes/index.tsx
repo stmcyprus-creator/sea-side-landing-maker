@@ -309,7 +309,7 @@ function Landing() {
       </section>
 
       {/* Budget strategies */}
-      <section className="bg-sand px-6 py-20 md:px-14 md:py-32">
+      <section className="watermark-texture bg-sand px-6 py-20 md:px-14 md:py-32">
         <SectionHead eyebrow="Бюджет" title="Подберём стратегию покупки под ваш бюджет" />
         <div className="mt-12 space-y-6 md:mt-14">
           {strategies.map((s) => (

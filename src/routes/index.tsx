@@ -11,6 +11,7 @@ import typeSecondary from "@/assets/type-secondary.jpg";
 import typeVillas from "@/assets/type-villas.jpg";
 import typeInvestment from "@/assets/type-investment.jpg";
 import logo from "@/assets/stm-logo-mark.png";
+import founderAsset from "@/assets/founder.jpg.asset.json";
 
 const TITLE = "Недвижимость в Турции и на Северном Кипре у моря | STM Real Estate";
 const DESCRIPTION =

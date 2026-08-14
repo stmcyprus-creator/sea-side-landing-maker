@@ -355,7 +355,7 @@ function Landing() {
       </section>
 
       {/* Founder */}
-      <section className="watermark-surface relative bg-sand px-6 py-20 md:px-14 md:py-32">
+      <section className="watermark-texture relative bg-sand px-6 py-20 md:px-14 md:py-32">
         <div className="relative grid gap-10 md:grid-cols-[minmax(0,22rem)_1fr] md:items-start md:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden border border-border bg-card shadow-soft">
             <img

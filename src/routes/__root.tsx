@@ -78,10 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "STM Real Estate — недвижимость в Турции" },
+      { title: "STM Real Estate — недвижимость у моря в Турции и на Северном Кипре" },
+      { property: "og:site_name", content: "STM Real Estate" },
+      { property: "og:locale", content: "ru_RU" },
       {
         name: "description",
-        content: "Апартаменты бизнес-класса в Аланье и Мерсине под ключ.",
+        content:
+          "Подбор недвижимости у моря в Аланье, Мерсине и на Северном Кипре: жизнь, ВНЖ, аренда и инвестиции.",
       },
       { name: "author", content: "STM Real Estate" },
       { property: "og:title", content: "STM Real Estate" },
@@ -111,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <head>
         <HeadContent />
       </head>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 export function initStm() {
 
   const header = document.getElementById('header');

@@ -2,9 +2,15 @@
 export function initStm() {
 
   const header = document.getElementById('header');
+  const heroEl = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
-  });
+    if(heroEl){
+      const y = window.scrollY;
+      const rate = Math.min(y * 0.18, 60);
+      heroEl.style.setProperty('--hero-parallax', `${rate}px`);
+    }
+  }, { passive: true });
 
   const burgerBtn = document.getElementById('burgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -64,7 +70,6 @@ export function initStm() {
 
   /* ---- sticky cta ---- */
   const stickyCta = document.getElementById('stickyCta');
-  const heroEl = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
     const past = window.scrollY > heroEl.offsetHeight * 0.8;
     stickyCta.classList.toggle('show', past);

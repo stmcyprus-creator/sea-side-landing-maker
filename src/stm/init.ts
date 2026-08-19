@@ -70,7 +70,6 @@ export function initStm() {
 
   /* ---- sticky cta ---- */
   const stickyCta = document.getElementById('stickyCta');
-  const heroEl = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
     const past = window.scrollY > heroEl.offsetHeight * 0.8;
     stickyCta.classList.toggle('show', past);

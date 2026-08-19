@@ -274,6 +274,10 @@
   }
 
   /* ---------- why: asymmetric ---------- */
+  .why-grid{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:1px;
+    background:var(--line);
+  }
   .why-feature{
     position:relative; overflow:hidden;
     background:var(--ink); padding:56px;
@@ -286,19 +290,20 @@
     background-image:url('/__l5e/assets-v1/c772371c-5eb5-44ca-aca9-040481bb3552/villa-modern-desktop.jpg');
     background-size:cover; background-position:center center; background-repeat:no-repeat;
     transform:scale(1.08); opacity:0;
-    transition:transform 1.5s cubic-bezier(.16,.84,.3,1), opacity 1.2s ease;
+    transition:transform 1.6s cubic-bezier(.16,.84,.3,1), opacity 1.2s ease;
   }
   .why-feature::after{
     content:''; position:absolute; inset:0; z-index:1;
-    background:linear-gradient(180deg, rgba(14,26,30,0.15) 0%, rgba(14,26,30,0.45) 55%, rgba(14,26,30,0.78) 100%);
+    background:linear-gradient(180deg, rgba(14,26,30,0.18) 0%, rgba(14,26,30,0.46) 55%, rgba(14,26,30,0.78) 100%);
   }
   .why-feature > *{ position:relative; z-index:2; }
-  .why-feature.is-visible::before{ transform:scale(1); opacity:1; }
+  .why-feature.in::before, .why-grid.in .why-feature::before{ transform:scale(1); opacity:1; }
   @media (max-width:860px){
     .why-feature::before{
       background-image:url('/__l5e/assets-v1/4fc00e5e-8ba9-44e2-b872-489b253782dc/villa-modern-mobile.jpg');
     }
   }
+
   .why-feature .eyebrow{ color:var(--brass-light); }
   .why-feature .eyebrow::before{ background:var(--brass-light); }
 

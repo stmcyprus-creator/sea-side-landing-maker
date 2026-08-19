@@ -186,6 +186,18 @@ export function initStm() {
     if(bg) bg.style.transform = 'none';
   });
   const locations = Array.from(document.querySelectorAll<HTMLElement>('.location'));
+  // в локациях фото остаётся статичным: двигаем подложку и текст внутри копии
+  locations.forEach((loc) => {
+    const copy = loc.querySelector<HTMLElement>('.location-copy');
+    if(!copy || copy.querySelector('.location-shift')) return;
+    const veil = document.createElement('div');
+    veil.className = 'location-veil';
+    const shiftEl = document.createElement('div');
+    shiftEl.className = 'location-shift';
+    while(copy.firstChild) shiftEl.appendChild(copy.firstChild);
+    copy.appendChild(veil);
+    copy.appendChild(shiftEl);
+  });
 
   const shift = (el: HTMLElement | null, host: HTMLElement, amount: number) => {
     if(!el) return;
@@ -201,7 +213,8 @@ export function initStm() {
       shift(band.querySelector<HTMLElement>('.pb-veil'), band, 60);
     });
     locations.forEach((loc) => {
-      shift(loc.querySelector<HTMLElement>('.location-copy'), loc, 90);
+      shift(loc.querySelector<HTMLElement>('.location-shift'), loc, 70);
+      shift(loc.querySelector<HTMLElement>('.location-veil'), loc, 120);
     });
   };
   moveBands();

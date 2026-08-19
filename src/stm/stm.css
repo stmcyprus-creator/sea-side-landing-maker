@@ -183,19 +183,17 @@
   }
   .hero::before{
     content:'';
-    position:absolute; inset:-40px; z-index:0;
-    background:url('https://images.unsplash.com/photo-1615571022219-eb45cf7faa9d?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;
-    animation:heroKenBurns 22s ease-in-out infinite alternate;
-    will-change:transform;
-    transform:translateY(var(--hero-parallax, 0px)) scale(1);
+    position:absolute; inset:0; z-index:0;
+    background:var(--ink);
   }
   .hero-video{
-    position:absolute; inset:-40px; z-index:0;
-    width:calc(100% + 80px); height:calc(100% + 80px);
-    object-fit:cover;
+    position:absolute; top:-4%; left:-4%; z-index:0;
+    width:108%; height:108%;
+    object-fit:cover; object-position:center;
     animation:heroKenBurns 22s ease-in-out infinite alternate;
     will-change:transform;
   }
+
   .hero::after{
     content:'';
     position:absolute; inset:0; z-index:1;

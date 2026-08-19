@@ -1,7 +1,7 @@
 // @ts-nocheck
 export function initStm() {
 
-  const header = document.getientById('header');
+  const header = document.getElementById('header');
   const heroEl = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);

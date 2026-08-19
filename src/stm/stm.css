@@ -282,7 +282,7 @@
   }
   .why-feature{
     background:var(--linen); padding:56px;
-    background-image:linear-gradient(180deg, rgba(14,26,30,0.05), rgba(14,26,30,0.62)), url('/__l5e/assets-v1/f3325efb-688a-4518-b861-0c2008f3e77e/villa-detail.jpg');
+    background-image:linear-gradient(180deg, rgba(14,26,30,0.05), rgba(14,26,30,0.62)), url('/__l5e/assets-v1/modern-villa.jpg');
     background-size:cover; background-position:center;
     color:var(--linen); min-height:460px;
     display:flex; flex-direction:column; justify-content:flex-end;

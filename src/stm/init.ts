@@ -179,6 +179,22 @@ export function initStm() {
     cookieBanner.classList.remove('show');
   });
 
+  /* ---- parallax bands (как в референсе) ---- */
+  const bands = Array.from(document.querySelectorAll<HTMLElement>('[data-parallax]'));
+  const moveBands = () => {
+    bands.forEach((band) => {
+      const bg = band.querySelector<HTMLElement>('.pb-bg');
+      if(!bg) return;
+      const r = band.getBoundingClientRect();
+      if(r.bottom < -200 || r.top > window.innerHeight + 200) return;
+      const progress = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+      bg.style.transform = `translate3d(0, ${(progress - 0.5) * 120}px, 0) scale(1.06)`;
+    });
+  };
+  moveBands();
+  window.addEventListener('scroll', moveBands, { passive: true });
+  window.addEventListener('resize', moveBands);
+
   /* ---- privacy modal close on backdrop ---- */
   document.getElementById('privacyModal').addEventListener('click', (e) => {
     if(e.target === e.currentTarget) e.target.style.display = 'none';

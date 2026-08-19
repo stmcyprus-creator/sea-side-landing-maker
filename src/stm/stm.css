@@ -17,8 +17,7 @@
 
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--sans);
+  html{
     background-color:var(--linen);
     background-image:
       url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.35 0 0 0 0 0.34 0 0 0 0 0.31 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E"),
@@ -26,6 +25,10 @@
       radial-gradient(1200px 800px at 10% -8%, rgba(125,136,120,0.07), transparent 62%),
       radial-gradient(ellipse at 50% 100%, rgba(110,110,102,0.06), transparent 55%);
     background-attachment:fixed, fixed, fixed, fixed;
+  }
+  body{
+    font-family:var(--sans);
+    background:transparent;
     color:var(--charcoal);
     font-weight:400;
     -webkit-font-smoothing:antialiased;
@@ -42,12 +45,12 @@
   /* тиснение логотипом по фону (blind deboss) */
   body::after{
     content:'';
-    position:fixed; inset:0; z-index:0; pointer-events:none;
+    position:fixed; inset:0; z-index:-1; pointer-events:none;
     background:var(--linen);
     -webkit-mask-image:url("../assets/stm-logo-mark.png");
     mask-image:url("../assets/stm-logo-mark.png");
-    -webkit-mask-size:300px auto;
-    mask-size:300px auto;
+    -webkit-mask-size:260px auto;
+    mask-size:260px auto;
     -webkit-mask-repeat:repeat;
     mask-repeat:repeat;
     -webkit-mask-position:center;
@@ -56,7 +59,7 @@
       drop-shadow(0 1.5px 0 rgba(255,255,255,0.95))
       drop-shadow(0 -1.5px 0 rgba(28,28,26,0.20))
       drop-shadow(1px 0 1px rgba(28,28,26,0.06));
-    opacity:0.55;
+    opacity:0.32;
   }
   body > *{ position:relative; z-index:1; }
 

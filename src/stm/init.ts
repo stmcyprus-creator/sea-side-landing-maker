@@ -179,16 +179,42 @@ export function initStm() {
     cookieBanner.classList.remove('show');
   });
 
-  /* ---- parallax bands (как в референсе) ---- */
+  /* ---- parallax: фото статично, фон и текст двигаются ---- */
   const bands = Array.from(document.querySelectorAll<HTMLElement>('[data-parallax]'));
+  bands.forEach((band) => {
+    const bg = band.querySelector<HTMLElement>('.pb-bg');
+    if(bg) bg.style.transform = 'none';
+  });
+  const locations = Array.from(document.querySelectorAll<HTMLElement>('.location'));
+  // в локациях фото остаётся статичным: двигаем подложку и текст внутри копии
+  locations.forEach((loc) => {
+    const copy = loc.querySelector<HTMLElement>('.location-copy');
+    if(!copy || copy.querySelector('.location-shift')) return;
+    const veil = document.createElement('div');
+    veil.className = 'location-veil';
+    const shiftEl = document.createElement('div');
+    shiftEl.className = 'location-shift';
+    while(copy.firstChild) shiftEl.appendChild(copy.firstChild);
+    copy.appendChild(veil);
+    copy.appendChild(shiftEl);
+  });
+
+  const shift = (el: HTMLElement | null, host: HTMLElement, amount: number) => {
+    if(!el) return;
+    const r = host.getBoundingClientRect();
+    if(r.bottom < -200 || r.top > window.innerHeight + 200) return;
+    const progress = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+    el.style.transform = `translate3d(0, ${(0.5 - progress) * amount}px, 0)`;
+  };
+
   const moveBands = () => {
     bands.forEach((band) => {
-      const bg = band.querySelector<HTMLElement>('.pb-bg');
-      if(!bg) return;
-      const r = band.getBoundingClientRect();
-      if(r.bottom < -200 || r.top > window.innerHeight + 200) return;
-      const progress = (window.innerHeight - r.top) / (window.innerHeight + r.height);
-      bg.style.transform = `translate3d(0, ${(progress - 0.5) * 120}px, 0) scale(1.06)`;
+      shift(band.querySelector<HTMLElement>('.pb-inner'), band, 110);
+      shift(band.querySelector<HTMLElement>('.pb-veil'), band, 60);
+    });
+    locations.forEach((loc) => {
+      shift(loc.querySelector<HTMLElement>('.location-shift'), loc, 70);
+      shift(loc.querySelector<HTMLElement>('.location-veil'), loc, 120);
     });
   };
   moveBands();

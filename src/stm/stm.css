@@ -370,47 +370,62 @@
     .process-step{ min-width:240px; flex:1; padding:36px 28px; }
   }
 
-  /* ---------- founder (референс: смещённая панель + портрет) ---------- */
+  /* ---------- founder (референс: портрет слева, текст справа) ---------- */
   .founder{
     position:relative;
-    max-width:1240px;
+    max-width:1320px;
     margin:0 auto;
-    padding:0 40px 96px;
+    padding:0 40px 110px;
   }
   .founder-panel{
     position:relative;
-    background:var(--linen-dim);
-    margin-left:14%;
-    padding:96px 64px 96px 46%;
-    min-height:520px;
-    display:flex; flex-direction:column; justify-content:center;
+    background:var(--linen);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:stretch;
+    gap:0;
   }
   .founder-img{
-    position:absolute;
-    left:0; top:96px; bottom:96px;
-    width:34%;
+    position:relative;
     overflow:hidden;
-    box-shadow:0 30px 70px -40px rgba(28,28,26,0.45);
+    min-height:620px;
+    background:var(--linen-dim);
   }
-  .founder-img img{ height:100%; object-position:center 18%; }
-  .founder-copy .eyebrow{ color:var(--stone); }
-  .founder-copy .eyebrow::before{ background:var(--stone); }
+  .founder-img img{
+    width:100%; height:100%;
+    object-fit:cover; object-position:center 18%;
+    display:block;
+    transform:scale(1.02);
+    transition:transform 1.6s cubic-bezier(0.16,1,0.3,1);
+  }
+  .founder:hover .founder-img img{ transform:scale(1.06); }
+  .founder-copy{
+    background:var(--linen-dim);
+    padding:96px clamp(28px,5vw,88px);
+    display:flex; flex-direction:column; justify-content:center;
+    align-items:flex-start;
+  }
+  .founder-copy .eyebrow{ color:var(--brass); }
+  .founder-copy .eyebrow::before{ background:var(--brass); }
   .founder-quote{
-    font-family:var(--serif); font-weight:400;
-    font-size:clamp(24px,2.5vw,34px); line-height:1.28;
+    font-family:var(--serif); font-weight:300;
+    font-size:clamp(23px,2.4vw,34px); line-height:1.32;
     margin-top:26px; color:var(--ink);
+    letter-spacing:-0.005em;
+    max-width:26ch;
   }
   .founder-copy p.founder-text{
-    margin-top:26px; font-size:14.5px; line-height:1.85; color:var(--stone); max-width:520px;
+    margin-top:26px; font-size:14.5px; line-height:1.85; color:var(--stone); max-width:46ch;
   }
-  .founder-name{ margin-top:34px; font-size:14px; letter-spacing:0.06em; text-transform:uppercase; }
-  .founder-role{ font-size:12px; color:var(--stone); margin-top:6px; letter-spacing:0.06em; }
-  .founder-copy .btn-ghost-link{ color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:4px; font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase; }
+  .founder-name{ margin-top:38px; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink); }
+  .founder-role{ font-size:11.5px; color:var(--stone); margin-top:8px; letter-spacing:0.12em; text-transform:uppercase; }
+  .founder-copy .btn-ghost-link{ margin-top:34px; color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:4px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; }
   @media (max-width:960px){
     .founder{ padding:0 20px 72px; }
-    .founder-panel{ margin-left:0; padding:0 28px 56px; min-height:0; }
-    .founder-copy .founder-quote{ font-size:24px; }
-    .founder-img{ position:relative; width:100%; top:auto; bottom:auto; left:auto; height:420px; margin-bottom:36px; }
+    .founder-panel{ grid-template-columns:1fr; }
+    .founder-img{ min-height:0; height:440px; }
+    .founder-copy{ padding:56px 28px; }
+    .founder-copy .founder-quote{ font-size:24px; max-width:none; }
   }
 
   /* ---------- parallax баннер (референс) ---------- */

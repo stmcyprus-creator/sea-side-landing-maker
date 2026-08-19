@@ -67,7 +67,7 @@
   .eyebrow{
     font-family:var(--sans);
     font-size:11px;
-    letter-spacing:0.22em;
+    letter-spacing:0.26em;
     text-transform:uppercase;
     color:var(--brass);
     font-weight:500;
@@ -233,12 +233,12 @@
   }
   .hero-actions{ display:flex; align-items:center; gap:28px; margin-top:44px; flex-wrap:wrap; }
   .btn-primary{
-    background:var(--brass); color:var(--ink);
-    padding:16px 34px; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500;
-    border:1px solid var(--brass);
+    background:var(--charcoal); color:var(--linen);
+    padding:17px 36px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;
+    border:1px solid var(--charcoal);
     transition:all 0.35s ease;
   }
-  .btn-primary:hover{ background:transparent; color:var(--linen); }
+  .btn-primary:hover{ background:var(--brass); border-color:var(--brass); color:#fff; }
   .btn-ghost-link{
     font-size:13px; color:var(--linen); border-bottom:1px solid var(--line-on-dark);
     padding-bottom:4px; letter-spacing:0.02em;
@@ -426,7 +426,7 @@
   .field input:focus, .field select:focus{ outline:none; border-color:var(--brass-light); }
   .field input::placeholder{ color:rgba(246,241,231,0.35); }
   .submit-btn{
-    margin-top:12px; background:var(--brass); color:var(--ink);
+    margin-top:12px; background:var(--brass); color:#fff;
     padding:16px 30px; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:500;
     border:1px solid var(--brass); width:fit-content;
     transition:all 0.35s ease;

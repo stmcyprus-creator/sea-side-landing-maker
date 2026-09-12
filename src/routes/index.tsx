@@ -4,7 +4,7 @@ import bodyHtml from "@/stm/body.html?raw";
 import { initStm } from "@/stm/init";
 
 const SITE = "https://sea-side-landing-maker.lovable.app";
-const TITLE = "Недвижимость у моря в Турции и на Северном Кипре — STM Real Estate";
+const TITLE = "Недвижимость у моря в Турции и на Северном Кипре — ЭС ТЭ ЭМ Риал Эстейт";
 const DESCRIPTION =
   "Подбор недвижимости у моря в Аланье, Мерсине и на Северном Кипре: для жизни, ВНЖ, аренды и инвестиций. Проверка объектов и застройщиков, безопасные расчёты, сопровождение до передачи ключей.";
 const OG_IMAGE =
@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${SITE}/` },
       { property: "og:locale", content: "ru_RU" },
-      { property: "og:site_name", content: "STM Real Estate" },
+      { property: "og:site_name", content: "ЭС ТЭ ЭМ Риал Эстейт" },
       { property: "og:image", content: OG_IMAGE },
-      { property: "og:image:alt", content: "Апартаменты у моря — STM Real Estate" },
+      { property: "og:image:alt", content: "Апартаменты у моря — ЭС ТЭ ЭМ Риал Эстейт" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "RealEstateAgent",
-          name: "STM Real Estate",
+          name: "ЭС ТЭ ЭМ Риал Эстейт",
           description: DESCRIPTION,
           url: `${SITE}/`,
           image: OG_IMAGE,

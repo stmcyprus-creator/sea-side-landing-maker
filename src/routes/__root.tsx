@@ -78,16 +78,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "STM Real Estate — недвижимость у моря в Турции и на Северном Кипре" },
-      { property: "og:site_name", content: "STM Real Estate" },
+      { title: "ЭС ТЭ ЭМ Риал Эстейт — недвижимость у моря в Турции и на Северном Кипре" },
+      { property: "og:site_name", content: "ЭС ТЭ ЭМ Риал Эстейт" },
       { property: "og:locale", content: "ru_RU" },
       {
         name: "description",
         content:
           "Подбор недвижимости у моря в Аланье, Мерсине и на Северном Кипре: жизнь, ВНЖ, аренда и инвестиции.",
       },
-      { name: "author", content: "STM Real Estate" },
-      { property: "og:title", content: "STM Real Estate" },
+      { name: "author", content: "ЭС ТЭ ЭМ Риал Эстейт" },
+      { property: "og:title", content: "ЭС ТЭ ЭМ Риал Эстейт" },
       { property: "og:description", content: "Апартаменты бизнес-класса в Аланье и Мерсине." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

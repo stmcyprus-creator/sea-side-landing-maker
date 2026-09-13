@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
           description: DESCRIPTION,
           url: `${SITE}/`,
           image: OG_IMAGE,
-          telephone: "+7 903 699 50 70",
+          telephone: "+7 905 681-40-06",
           areaServed: [
             { "@type": "Place", name: "Аланья, Турция" },
             { "@type": "Place", name: "Мерсин, Турция" },

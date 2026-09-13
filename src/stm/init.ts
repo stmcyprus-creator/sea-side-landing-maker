@@ -164,7 +164,7 @@ export function initStm() {
     }
     const btn = document.getElementById('quizSubmit');
   const message = `Здравствуйте! Хочу получить подборку недвижимости.%0AЦель: ${encodeURIComponent(quizAnswers[0] || 'не указана')}%0AБюджет: ${encodeURIComponent(quizAnswers[1] || 'не указан')}%0ALокация: ${encodeURIComponent(quizAnswers[2] || 'не указана')}%0AКонтакт: ${encodeURIComponent(contact)}`;
-  window.open(`https://wa.me/79036995070?text=${message}`, '_blank', 'noopener');
+  window.open(`https://wa.me/79056814006?text=${message}`, '_blank', 'noopener');
   btn.textContent = 'Подборка готовится — продолжите в WhatsApp';
   btn.style.pointerEvents = 'none';
   });

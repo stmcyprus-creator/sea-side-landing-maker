@@ -169,7 +169,44 @@ export function initStm() {
   btn.style.pointerEvents = 'none';
   });
 
+  /* ---- tier form -> whatsapp ---- */
+  const tierForm = document.getElementById('tierForm');
+  if(tierForm){
+    tierForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameEl = document.getElementById('tierName');
+      const contactEl = document.getElementById('tierContact');
+      const budgetEl = document.getElementById('tierBudget');
+      const noteEl = document.getElementById('tierNote');
+      const noteBox = document.getElementById('tierFormNote');
+      const name = nameEl.value.trim().slice(0, 80);
+      const contact = contactEl.value.trim().slice(0, 80);
+      let ok = true;
+      [[nameEl, name], [contactEl, contact]].forEach(([el, val]) => {
+        el.classList.toggle('invalid', !val);
+        if(!val){ ok = false; }
+      });
+      if(!ok){
+        noteBox.textContent = 'Заполните имя и контакт — так мы сможем ответить.';
+        (name ? contactEl : nameEl).focus();
+        return;
+      }
+      const lines = [
+        'Здравствуйте! Заявка с сайта — уровни входа.',
+        `Имя: ${name}`,
+        `Контакт: ${contact}`,
+        `Бюджет: ${budgetEl.value}`,
+      ];
+      const note = noteEl.value.trim().slice(0, 200);
+      if(note) lines.push(`Комментарий: ${note}`);
+      const text = lines.map(l => encodeURIComponent(l)).join('%0A');
+      window.open(`https://wa.me/79056814006?text=${text}`, '_blank', 'noopener');
+      noteBox.textContent = 'Заявка сформирована — продолжите диалог в WhatsApp.';
+    });
+  }
+
   /* ---- cookie banner ---- */
+
   const cookieBanner = document.getElementById('cookieBanner');
   if(!localStorage.getItem('stm_cookies_accepted')){
     setTimeout(() => cookieBanner.classList.add('show'), 1200);

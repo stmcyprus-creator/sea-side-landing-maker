@@ -129,8 +129,9 @@
     filter:drop-shadow(0 1px 6px rgba(14,26,30,0.45));
   }
   .logo img{ height:34px; width:auto; display:block; }
-  .logo .logo-caption{ font-size:9px; letter-spacing:0.1em; color:rgba(246,241,231,0.7); font-family:var(--sans); text-transform:uppercase; font-weight:400; text-shadow:0 1px 4px rgba(14,26,30,0.5); display:flex; flex-direction:column; gap:2px;}
-  .logo .logo-caption-sub{ font-size:9px; letter-spacing:0.1em; color:rgba(246,241,231,0.7); text-transform:uppercase; font-weight:400; }
+  .logo .logo-caption{ color:rgba(246,241,231,0.7); font-family:var(--sans); display:flex; flex-direction:column; gap:3px; text-shadow:0 1px 4px rgba(14,26,30,0.5);}
+  .logo .logo-caption-main{ font-size:15px; letter-spacing:0.08em; color:var(--linen); text-transform:uppercase; font-weight:500; line-height:1.1; white-space:nowrap;}
+  .logo .logo-caption-sub{ font-size:9px; letter-spacing:0.14em; color:rgba(246,241,231,0.65); text-transform:uppercase; font-weight:400; }
   nav ul{ list-style:none; display:flex; gap:36px; }
   nav a{ font-size:13px; letter-spacing:0.03em; color:var(--linen); opacity:0.9; transition:opacity 0.2s; text-shadow:0 1px 5px rgba(14,26,30,0.5); }
   nav a:hover{ opacity:1; }
@@ -614,6 +615,10 @@
     .wrap{ padding:0 22px; }
     .section{ padding:74px 0; }
     .location-copy, .why-feature, .founder-copy{ padding:40px 26px; }
+    .logo{ gap:9px; }
+    .logo img{ height:28px; }
+    .logo .logo-caption-main{ font-size:11px; letter-spacing:0.06em; }
+    .logo .logo-caption-sub{ font-size:7.5px; }
   }
 
   /* ---------- geo map ---------- */

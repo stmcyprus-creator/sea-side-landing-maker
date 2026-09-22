@@ -12,6 +12,7 @@ const DESCRIPTION =
   "Подборка вилл и коттеджей в Аланье, Мерсине и на Северном Кипре: фото, площади, цены и краткое описание. Заявка по любому объекту уходит напрямую в WhatsApp.";
 
 const WHATSAPP = "79056814006";
+const BOT = "https://t.me/stmrealestate_bot";
 
 type Offer = {
   id: string;
@@ -147,8 +148,11 @@ function VillasPage() {
             оплаты.
           </p>
           <div className="offers-hero-actions">
-            <a className="btn-primary" href={waLink()} target="_blank" rel="noopener">
-              Запросить подборку в WhatsApp
+            <a className="btn-primary" href={BOT} target="_blank" rel="noopener">
+              Запросить подборку у ИИ-консультанта
+            </a>
+            <a className="btn-ghost-link" href="tel:+79056814006">
+              Позвонить: +7 905 681-40-06
             </a>
             <Link to="/" className="btn-ghost-link">
               ← На главную
@@ -176,14 +180,14 @@ function VillasPage() {
                     <li>{offer.distance}</li>
                   </ul>
                   <p className="offer-note">{offer.note}</p>
-                  <a
-                    className="offer-cta"
-                    href={waLink(offer)}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Узнать детали в WhatsApp →
-                  </a>
+                  <div className="offer-actions">
+                    <a className="offer-cta" href={BOT} target="_blank" rel="noopener">
+                      Узнать детали у ИИ-консультанта →
+                    </a>
+                    <a className="offer-cta-alt" href={waLink(offer)} target="_blank" rel="noopener">
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}
@@ -198,9 +202,17 @@ function VillasPage() {
             В работе больше объектов, чем размещено на сайте. Напишите бюджет и цель покупки — пришлём
             подборку под задачу в течение дня.
           </p>
-          <a className="btn-primary" href={waLink()} target="_blank" rel="noopener">
-            Написать в WhatsApp
-          </a>
+          <div className="offers-hero-actions">
+            <a className="btn-primary" href={BOT} target="_blank" rel="noopener">
+              Открыть ИИ-консультанта
+            </a>
+            <a className="btn-ghost-link" href="mailto:info@stmrealestate.ru">
+              info@stmrealestate.ru
+            </a>
+            <a className="btn-ghost-link" href="https://instagram.com/stmcyprus" target="_blank" rel="noopener">
+              Instagram
+            </a>
+          </div>
         </div>
       </section>
     </main>

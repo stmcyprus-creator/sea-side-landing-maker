@@ -903,3 +903,21 @@
     color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:4px;
     font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
   }
+
+/* ---- contacts / AI bot ---- */
+.tier-cta{margin-top:48px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
+.tier-cta h3{font-size:clamp(22px,3vw,30px);margin:0 0 10px}
+.tier-cta p{opacity:.8;margin:0 0 22px}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px}
+.contact-main{display:block;padding:18px 20px;border-radius:14px;background:var(--olive,#7C8A5A);color:#fff;text-decoration:none;transition:transform .25s ease,filter .25s ease}
+.contact-main:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.contact-main-label{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.contact-main-value{display:block;font-size:20px;margin-top:4px}
+.contact-list{display:grid;gap:10px;margin-top:16px}
+.contact-list a{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.16);text-decoration:none;color:inherit;transition:background .2s ease,border-color .2s ease}
+.contact-list a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.34)}
+.contact-list span{font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.contact-list b{font-weight:500}
+.offer-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
+.offer-cta-alt{font-size:14px;letter-spacing:.04em;text-decoration:none;color:inherit;opacity:.7;border-bottom:1px solid currentColor}
+.offer-cta-alt:hover{opacity:1}

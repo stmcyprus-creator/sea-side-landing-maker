@@ -899,3 +899,7 @@
     .offers-hero{ padding:110px 0 40px; }
     .offers-grid{ grid-template-columns:1fr; }
   }
+  .offers-hero-actions .btn-ghost-link{
+    color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:4px;
+    font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+  }

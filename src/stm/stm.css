@@ -615,6 +615,10 @@
     .wrap{ padding:0 22px; }
     .section{ padding:74px 0; }
     .location-copy, .why-feature, .founder-copy{ padding:40px 26px; }
+    .logo{ gap:9px; }
+    .logo img{ height:28px; }
+    .logo .logo-caption-main{ font-size:11px; letter-spacing:0.06em; }
+    .logo .logo-caption-sub{ font-size:7.5px; }
   }
 
   /* ---------- geo map ---------- */

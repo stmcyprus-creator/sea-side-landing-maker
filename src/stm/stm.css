@@ -595,7 +595,9 @@
   .footer-top{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:28px; align-items:center; }
   footer .logo-f{ display:flex; align-items:center; gap:10px; }
   footer .logo-f img{ height:26px; width:auto; }
-  footer .logo-f .cap{ font-size:9px; letter-spacing:0.08em; text-transform:uppercase; color:rgba(246,241,231,0.45); font-family:var(--sans); }
+  footer .logo-f .logo-caption{ color:rgba(246,241,231,0.7); font-family:var(--sans); display:flex; flex-direction:column; gap:3px; }
+  footer .logo-f .logo-caption-main{ font-size:14px; letter-spacing:0.08em; color:var(--linen); text-transform:uppercase; font-weight:500; line-height:1.1; white-space:nowrap; }
+  footer .logo-f .logo-caption-sub{ font-size:9px; letter-spacing:0.14em; color:rgba(246,241,231,0.6); text-transform:uppercase; font-weight:400; }
   .footer-left{ display:flex; align-items:center; flex-wrap:wrap; gap:14px 28px; }
   .footer-contacts{ display:flex; flex-direction:column; gap:4px; }
   .footer-phone{ font-family:var(--display-serif); font-size:18px; color:var(--linen); letter-spacing:0.02em; }

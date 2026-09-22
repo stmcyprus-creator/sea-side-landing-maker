@@ -11,10 +11,10 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // produces plain static output in dist/client: prerendered index.html for every
 // route plus hashed assets — deployable to any static host, no Node/Workers runtime.
 const insideLovable =
-  process.env.LOVABLE_SANDBOX === "1" || !!process.env.DEV_SERVER__PROJECT_PATH;
+  process.env["LOVABLE_SANDBOX"] === "1" || !!process.env["DEV_SERVER__PROJECT_PATH"];
 
 export default defineConfig({
-  nitro: insideLovable ? undefined : false,
+  nitro: insideLovable,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this

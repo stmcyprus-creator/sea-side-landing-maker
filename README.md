@@ -102,3 +102,7 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Статический деплой
+
+`npm run build` (или `bun run build`) вне Lovable собирает полностью статический сайт: готовые HTML для каждого роута (`/`, `/villas`) плюс ассеты попадают в `dist/client`. Загрузите содержимое `dist/client` на любой статический хостинг — серверный рантайм (Node, Cloudflare Workers) не нужен. Домен для canonical/OG/JSON-LD задаётся в `src/lib/site.ts`.

@@ -11,7 +11,7 @@ export default defineConfig({
   // assets into .output/public, with no server runtime to deploy.
   // Inside the Lovable build LOVABLE_NITRO_PRESET still pins Cloudflare, so the
   // preview/publish flow is unaffected; this applies to your own `npm run build`.
-  nitro: { preset: "static" },
+  nitro: false,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this

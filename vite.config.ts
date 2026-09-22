@@ -6,12 +6,15 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Inside Lovable (preview/publish) the nitro target is pinned by the platform.
+// Outside it we skip nitro completely, so `bun run build` / `npm run build`
+// produces plain static output in dist/client: prerendered index.html for every
+// route plus hashed assets — deployable to any static host, no Node/Workers runtime.
+const insideLovable =
+  process.env.LOVABLE_SANDBOX === "1" || !!process.env.DEV_SERVER__PROJECT_PATH;
+
 export default defineConfig({
-  // Fully static output: nitro's `static` preset emits only prerendered HTML +
-  // assets into .output/public, with no server runtime to deploy.
-  // Inside the Lovable build LOVABLE_NITRO_PRESET still pins Cloudflare, so the
-  // preview/publish flow is unaffected; this applies to your own `npm run build`.
-  nitro: false,
+  nitro: insideLovable ? undefined : false,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this

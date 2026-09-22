@@ -5,8 +5,9 @@ import offer3 from "@/assets/offer-3.jpg";
 import offer4 from "@/assets/offer-4.jpg";
 import offer5 from "@/assets/offer-5.jpg";
 import offer6 from "@/assets/offer-6.jpg";
+import { SITE_URL } from "@/lib/site";
 
-const SITE = "https://stmrealestate.lovable.app";
+const SITE = SITE_URL;
 const TITLE = "Виллы и коттеджи у моря в Средиземноморье — цены и фото";
 const DESCRIPTION =
   "Подборка вилл и коттеджей в Аланье, Мерсине и на Северном Кипре: фото, площади, цены и краткое описание. Заявка по любому объекту уходит напрямую в WhatsApp.";

@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import bodyHtml from "@/stm/body.html?raw";
 import { initStm } from "@/stm/init";
+import { SITE_URL } from "@/lib/site";
 
-const SITE = "https://sea-side-landing-maker.lovable.app";
+const SITE = SITE_URL;
 const TITLE = "Недвижимость у моря в Турции и на Северном Кипре — ЭС ТЭ ЭМ Риал Эстейт";
 const DESCRIPTION =
   "Подбор недвижимости у моря в Аланье, Мерсине и на Северном Кипре: для жизни, ВНЖ, аренды и инвестиций. Проверка объектов и застройщиков, безопасные расчёты, сопровождение до передачи ключей.";

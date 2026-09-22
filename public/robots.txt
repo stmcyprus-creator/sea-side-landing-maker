@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://sea-side-landing-maker.lovable.app/sitemap.xml
+Sitemap: https://stmrealestate.ru/sitemap.xml

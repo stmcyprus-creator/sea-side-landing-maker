@@ -7,9 +7,21 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Fully static output: nitro's `static` preset emits only prerendered HTML +
+  // assets into .output/public, with no server runtime to deploy.
+  // Inside the Lovable build LOVABLE_NITRO_PRESET still pins Cloudflare, so the
+  // preview/publish flow is unaffected; this applies to your own `npm run build`.
+  nitro: { preset: "static" },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Prerender every route so each one ships as a static HTML file.
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+      autoStaticPathsDiscovery: true,
+    },
+    pages: [{ path: "/" }, { path: "/villas" }],
   },
 });

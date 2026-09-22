@@ -918,3 +918,6 @@
 .contact-list a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.34)}
 .contact-list span{font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
 .contact-list b{font-weight:500}
+.offer-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
+.offer-cta-alt{font-size:14px;letter-spacing:.04em;text-decoration:none;color:inherit;opacity:.7;border-bottom:1px solid currentColor}
+.offer-cta-alt:hover{opacity:1}

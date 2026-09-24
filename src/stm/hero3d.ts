@@ -54,7 +54,6 @@ export function initHero3d() {
       const b2 = new THREE.Box3().setFromObject(model);
       const c = b2.getCenter(new THREE.Vector3());
       const r = Math.max(b2.getSize(new THREE.Vector3()).length() * 0.5, 120);
-      console.log("hero3d debug");
 
 
 

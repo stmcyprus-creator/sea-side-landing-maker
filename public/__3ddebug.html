@@ -1,0 +1,33 @@
+<!doctype html><html><body style="margin:0"><canvas id="c"></canvas>
+<script type="module">
+import * as THREE from 'https://esm.sh/three@0.180.0';
+import { GLTFLoader } from 'https://esm.sh/three@0.180.0/examples/jsm/loaders/GLTFLoader.js';
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('c'), antialias:true});
+renderer.setSize(1280, 800);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x224455);
+const camera = new THREE.PerspectiveCamera(55, 1280/800, 0.1, 20000);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 2));
+const dl = new THREE.DirectionalLight(0xffffff, 3); dl.position.set(5,10,7); scene.add(dl);
+const gltf = await new GLTFLoader().loadAsync('/__l5e/assets-v1/fc14231c-0e47-49c5-8020-66f569fff4a7/villa-complex.glb');
+const m = gltf.scene;
+scene.add(m);
+const box = new THREE.Box3().setFromObject(m);
+const size = box.getSize(new THREE.Vector3());
+const center = box.getCenter(new THREE.Vector3());
+console.log('SIZE', JSON.stringify(size));
+console.log('CENTER', JSON.stringify(center));
+// center & scale to 100
+const s = 100/Math.max(size.x,size.y,size.z);
+m.scale.setScalar(s);
+m.position.set(-center.x*s, -box.min.y*s, -center.z*s);
+scene.updateMatrixWorld(true);
+const b2 = new THREE.Box3().setFromObject(m);
+const c2 = b2.getCenter(new THREE.Vector3());
+const r = b2.getSize(new THREE.Vector3()).length()*0.5;
+console.log('C2', JSON.stringify(c2), 'R', r);
+camera.position.set(c2.x + r*1.2, r*0.8, c2.z + r*1.5);
+camera.lookAt(c2);
+renderer.render(scene, camera);
+console.log('RENDERED');
+</script></body></html>

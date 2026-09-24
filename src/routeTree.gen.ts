@@ -10,11 +10,29 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ConsentRouteImport } from './routes/consent'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as RequisitesRouteImport } from './routes/requisites'
 import { Route as VillasRouteImport } from './routes/villas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsentRoute = ConsentRouteImport.update({
+  id: '/consent',
+  path: '/consent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequisitesRoute = RequisitesRouteImport.update({
+  id: '/requisites',
+  path: '/requisites',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VillasRoute = VillasRouteImport.update({
@@ -25,27 +43,39 @@ const VillasRoute = VillasRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/consent': typeof ConsentRoute
+  '/privacy': typeof PrivacyRoute
+  '/requisites': typeof RequisitesRoute
   '/villas': typeof VillasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/consent': typeof ConsentRoute
+  '/privacy': typeof PrivacyRoute
+  '/requisites': typeof RequisitesRoute
   '/villas': typeof VillasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/consent': typeof ConsentRoute
+  '/privacy': typeof PrivacyRoute
+  '/requisites': typeof RequisitesRoute
   '/villas': typeof VillasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/villas'
+  fullPaths: '/' | '/consent' | '/privacy' | '/requisites' | '/villas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/villas'
-  id: '__root__' | '/' | '/villas'
+  to: '/' | '/consent' | '/privacy' | '/requisites' | '/villas'
+  id: '__root__' | '/' | '/consent' | '/privacy' | '/requisites' | '/villas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ConsentRoute: typeof ConsentRoute
+  PrivacyRoute: typeof PrivacyRoute
+  RequisitesRoute: typeof RequisitesRoute
   VillasRoute: typeof VillasRoute
 }
 
@@ -56,6 +86,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consent': {
+      id: '/consent'
+      path: '/consent'
+      fullPath: '/consent'
+      preLoaderRoute: typeof ConsentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/requisites': {
+      id: '/requisites'
+      path: '/requisites'
+      fullPath: '/requisites'
+      preLoaderRoute: typeof RequisitesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/villas': {
@@ -70,6 +121,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ConsentRoute: ConsentRoute,
+  PrivacyRoute: PrivacyRoute,
+  RequisitesRoute: RequisitesRoute,
   VillasRoute: VillasRoute,
 }
 export const routeTree = rootRouteImport

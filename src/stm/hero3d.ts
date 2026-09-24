@@ -54,6 +54,13 @@ export function initHero3d() {
       const b2 = new THREE.Box3().setFromObject(model);
       const c = b2.getCenter(new THREE.Vector3());
       const r = Math.max(b2.getSize(new THREE.Vector3()).length() * 0.5, 120);
+      console.log("hero3d debug", JSON.stringify({
+        size: b2.getSize(new THREE.Vector3()),
+        center: c,
+        r,
+        meshes: (() => { let n = 0; model.traverse((o) => { if ((o as any).isMesh) n++; }); return n; })(),
+      }));
+
 
       // Camera path: aerial establishing shot -> descending approach to terraces.
       const p0 = new THREE.Vector3(c.x + r * 2.5, r * 2.0, c.z + r * 3.0);

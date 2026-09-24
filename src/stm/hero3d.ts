@@ -74,15 +74,15 @@ export function initHero3d() {
       let ready = false;
 
       function updateProgress() {
-        const hr = hero.getBoundingClientRect();
+        const hr = heroEl.getBoundingClientRect();
         const total = Math.max(hr.height, 1);
         progress = Math.min(1, Math.max(0, -hr.top / (total * 0.9)));
         heroVisible = hr.bottom > -80;
       }
 
       function resize() {
-        const w = hero.clientWidth;
-        const h = hero.clientHeight;
+        const w = heroEl.clientWidth;
+        const h = heroEl.clientHeight;
         if (!w || !h) return;
         renderer.setSize(w, h, false);
         camera.aspect = w / h;
@@ -108,7 +108,7 @@ export function initHero3d() {
         renderer.render(scene, camera);
         if (!ready) {
           ready = true;
-          canvas.classList.add("ready");
+          canvasEl.classList.add("ready");
           if (video) video.classList.add("hero-video-hidden");
         }
       }

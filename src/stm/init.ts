@@ -1,7 +1,5 @@
 // @ts-nocheck
 export function initStm() {
-  import("@/stm/hero3d").then((m) => m.initHero3d());
-
 
   const header = document.getElementById('header');
   const heroEl = document.querySelector('.hero');

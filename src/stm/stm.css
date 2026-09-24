@@ -939,3 +939,17 @@
 .offer-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
 .offer-cta-alt{font-size:14px;letter-spacing:.04em;text-decoration:none;color:inherit;opacity:.7;border-bottom:1px solid currentColor}
 .offer-cta-alt:hover{opacity:1}
+
+/* ---- legal pages ---- */
+.legal-page{ min-height:100vh; background:var(--sand, #f4efe6); padding:80px 20px; }
+.legal-wrap{ max-width:760px; margin:0 auto; }
+.legal-back{ font-size:13px; opacity:.7; text-decoration:none; color:inherit; }
+.legal-page h1{ font-size:clamp(30px,5vw,44px); margin:24px 0 32px; line-height:1.15; }
+.legal-body h2{ font-size:18px; margin:28px 0 8px; font-weight:500; }
+.legal-body p{ line-height:1.7; font-size:15px; opacity:.85; }
+.legal-body a{ color:inherit; }
+.legal-reqs div{ display:flex; gap:20px; padding:14px 0; border-bottom:1px solid rgba(0,0,0,.1); }
+.legal-reqs dt{ width:200px; flex-shrink:0; opacity:.6; font-size:14px; }
+.legal-reqs dd{ margin:0; font-size:15px; }
+.legal-nav{ margin-top:56px; display:flex; flex-wrap:wrap; gap:20px; font-size:13px; }
+.legal-nav a{ color:inherit; opacity:.7; }

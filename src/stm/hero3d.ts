@@ -12,6 +12,9 @@ export function initHero3d() {
   const hero = document.querySelector(".hero") as HTMLElement | null;
   const video = document.querySelector(".hero-video") as HTMLVideoElement | null;
   if (!canvas || !hero) return;
+  const canvasEl: HTMLCanvasElement = canvas;
+  const heroEl: HTMLElement = hero;
+
 
   Promise.all([
     import("three"),

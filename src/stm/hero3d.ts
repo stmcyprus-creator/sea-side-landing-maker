@@ -25,7 +25,7 @@ export function initHero3d() {
       renderer.toneMappingExposure = 1.05;
 
       const scene = new THREE.Scene();
-      scene.fog = new THREE.FogExp2(0x0e1a1e, 0.0012);
+      scene.fog = new THREE.FogExp2(0x0e1a1e, 0.00035);
 
       const camera = new THREE.PerspectiveCamera(55, 1, 0.5, 6000);
 
@@ -63,8 +63,9 @@ export function initHero3d() {
 
 
       // Camera path: aerial establishing shot -> descending approach to terraces.
-      const p0 = new THREE.Vector3(c.x + r * 2.5, r * 2.0, c.z + r * 3.0);
-      const p1 = new THREE.Vector3(c.x + r * 0.55, r * 0.5, c.z + r * 1.05);
+      const p0 = new THREE.Vector3(c.x + r * 1.4, r * 1.15, c.z + r * 1.9);
+      const p1 = new THREE.Vector3(c.x + r * 0.5, r * 0.35, c.z + r * 0.75);
+
       const t0 = c.clone();
       const t1 = c.clone().add(new THREE.Vector3(0, -r * 0.28, 0));
 

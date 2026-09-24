@@ -61,8 +61,9 @@ export function initHero3d() {
       const p0 = new THREE.Vector3(c.x + r * 1.4, r * 1.15, c.z + r * 1.9);
       const p1 = new THREE.Vector3(c.x + r * 0.5, r * 0.35, c.z + r * 0.75);
 
-      const t0 = c.clone();
-      const t1 = c.clone().add(new THREE.Vector3(0, -r * 0.28, 0));
+      const t0 = c.clone().add(new THREE.Vector3(-r * 0.3, 0, 0));
+      const t1 = c.clone().add(new THREE.Vector3(-r * 0.3, -r * 0.28, 0));
+
 
       let progress = 0; // raw scroll progress
       let eased = 0; // smoothed value the camera actually uses

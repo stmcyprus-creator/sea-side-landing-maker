@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { Toaster } from "../components/ui/sonner";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { METRIKA_SNIPPET, METRIKA_ID, installContactTracking } from "../lib/metrika";
 
 function NotFoundComponent() {
   return (
@@ -105,6 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [{ children: METRIKA_SNIPPET }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -119,6 +121,11 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <noscript>
+          <div>
+            <img src={`https://mc.yandex.ru/watch/${METRIKA_ID}`} style={{ position: "absolute", left: "-9999px" }} alt="" />
+          </div>
+        </noscript>
         {children}
         <Scripts />
       </body>
@@ -128,6 +135,9 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  useEffect(() => {
+    installContactTracking();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -601,7 +601,7 @@
   footer .logo-f .logo-caption-sub{ font-size:9px; letter-spacing:0.14em; color:rgba(246,241,231,0.6); text-transform:uppercase; font-weight:400; }
   .footer-left{ display:flex; align-items:center; flex-wrap:wrap; gap:14px 28px; }
   .footer-contacts{ display:flex; flex-direction:column; gap:4px; }
-  .footer-phone{ font-family:var(--display-serif); font-size:18px; color:var(--linen); letter-spacing:0.02em; }
+  .footer-phone{ font-family:var(--sans); font-size:17px; font-weight:500; color:var(--linen); letter-spacing:0.05em; }
   .footer-mail{ font-size:13px; color:rgba(246,241,231,0.6); }
   .footer-phone:hover, .footer-mail:hover{ color:#fff; }
   .footer-social{ display:flex; align-items:center; gap:10px; }
